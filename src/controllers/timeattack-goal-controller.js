@@ -1,4 +1,4 @@
-const goalService = require('../services/timeattack-goal-sevices.js');
+const goalService = require('../services/timeattack-goal-sevice.js');
 
 // 팀미션(타임어택) 진행상황
 const getTeamGoalTimeAttack = async (req, res) => {

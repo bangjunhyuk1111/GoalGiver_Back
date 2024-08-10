@@ -45,6 +45,7 @@ const findTeamGoalTimeAttackById = async (goalId, userId) => {
     goal.remaining_time = `${remainingHours.toString().padStart(2, '0')}:${remainingMinutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
 
     // 팀 검증된 날짜 조회
+    // 팀 목표에서 내 인증 내역을 가져오는 것으로
     const validationQuery = `
       SELECT tv.accepted_at 
       FROM Team_Validation tv
@@ -58,6 +59,7 @@ const findTeamGoalTimeAttackById = async (goalId, userId) => {
     goal.my_progress_percent = teamValidationResult.length > 0 ? 100 : 0;
 
     // 인증된 날짜를 추가
+    // 내가 인증받은 날짜
     goal.validation_history = teamValidationResult.map(validation => {
       // 날짜를 한국 시간 기준으로 변환
       const validatedDateKST = new Date(new Date(validation.accepted_at).getTime() + KST_OFFSET);
