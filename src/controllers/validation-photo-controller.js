@@ -1,3 +1,4 @@
+
 // 사진 인증 내역 조회
 const { StatusCodes } = require('http-status-codes');
 const validationService = require('../services/validation-photo-service');

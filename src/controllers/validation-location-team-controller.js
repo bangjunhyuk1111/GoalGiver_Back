@@ -1,4 +1,6 @@
+
 // 위치 인증내역, 팀원인증 내역(goalsuccess)
+
 const { StatusCodes } = require('http-status-codes');
 const validationService = require('../services/validation-location-team-service');
 
