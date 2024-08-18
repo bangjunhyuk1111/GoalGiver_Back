@@ -41,13 +41,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // 라우터
-app.use('/goals', weeklyGoalRoutes);
-app.use('/goals', monthlyGoalRoutes);
-app.use('/goals', yearlyGoalRoutes);
-app.use('/goals', validationLocationAndTeamRoutes);
-app.use('/goals', teamGoalTimeAttackRoutes);
-app.use('/goals', teamGoalTimeAttackValidationRoutes);
-app.use('/goals', validationPhotoRoutes);
+app.use('/goals/week', weeklyGoalRoutes);
+app.use('/goals/month', monthlyGoalRoutes);
+app.use('/goals/year', yearlyGoalRoutes);
+app.use('/goals/location-team/list', validationLocationAndTeamRoutes);
+app.use('/goals/timeattack/progress', teamGoalTimeAttackRoutes);
+app.use('/goals/timeattack/list', teamGoalTimeAttackValidationRoutes);
+app.use('/goals/photo/list', validationPhotoRoutes);
 
 // 404 에러 처리 미들웨어
 app.use((req, res, next) => {
