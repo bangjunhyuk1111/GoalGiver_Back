@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./src/index",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
